@@ -11,11 +11,12 @@ func main(){
 	log.SetPrefix("goModTest: ")
 	log.SetFlags(0)
 
-	message, err := test.Hiya("")
+	testNames := []string{"Stevie", "Dave", "Darwin"}
+	testMessages, err := test.whoWhis(testNames)
 
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	fmt.Println(message)
+	fmt.Println(testMessages)
 }
